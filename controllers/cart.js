@@ -29,6 +29,7 @@ export const addToCart = (req,res) => {
 
 export const deleteCartItem = async (req,res) => {
   const { item_id } = req.params;
+  // delete individual item from cart
   Cart.findOneAndRemove({ item_id }, (err, doc) => {
     if (err) return res.status(500).send(err);
     return res.json({ message: 'Post deleted successfully.', doc });
@@ -38,6 +39,7 @@ export const deleteCartItem = async (req,res) => {
 };
 
 export const deleteAllCartItem = async (req,res) => {
+  // delete all items from cart
   Cart.remove({}, (err) => {
     if (err) {
       res.send(err);

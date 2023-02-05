@@ -19,7 +19,7 @@ export const getTotalOrders = async (req, res) => {
 export const AddOrder = (req, res) => {
   const {order_id} = req.body;
   const orderItem = new Order({
-    order_id : order_id || v4(),
+    order_id : order_id || v4(), // passing random id if order_id isn't passed (not ideal)
   });
   orderItem.save()
   res.status(200).json({ message: 'Order create', orderItem});

@@ -14,6 +14,7 @@ export const completeCheckout = async (req, res) => {
       });
     }
     let flag = false;
+    // loop to check if coupon exist
     for (let i=0; i<couponCodes.length; i++) {
       if (couponCodes[i].coupon_code == coupon_code) {
         flag = true;

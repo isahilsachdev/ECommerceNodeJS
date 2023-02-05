@@ -6,7 +6,8 @@ const router = express.Router();
 
 export const getCouponCode = async (req, res) => {
   try {
-    const code = v4().substring(0,6); // reducing coupon's length
+    // reducing coupon's length
+    const code = v4().substring(0,6);
     const coupon_code = new Coupon({
       coupon_code: `code-${code}`,
     });
