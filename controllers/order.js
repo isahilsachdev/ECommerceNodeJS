@@ -25,3 +25,5 @@ export const AddOrder = (req, res) => {
   orderItem.save()
   res.status(200).json({ message: 'Order create', orderItem});
 }
+
+export default router;
