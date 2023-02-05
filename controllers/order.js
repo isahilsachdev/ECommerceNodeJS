@@ -1,5 +1,6 @@
 import express from 'express';
 import Order from '../models/Order.js';
+import { v4 } from 'uuid';
 
 const router = express.Router();
 
@@ -16,11 +17,9 @@ export const getTotalOrders = async (req, res) => {
 }
 
 export const AddOrder = (req, res) => {
-  const {order_id, name, price} = req.body;
+  const {order_id} = req.body;
   const orderItem = new Order({
-    order_id,
-    name,
-    price,
+    order_id : order_id || v4(),
   });
   orderItem.save()
   res.status(200).json({ message: 'Order create', orderItem});
