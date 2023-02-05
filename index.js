@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import cartRoutes from './routes/cart.js';
+import orderRoutes from './routes/order.js';
 import bodyParser from 'body-parser';
 
 const app = express();
@@ -12,6 +13,7 @@ app.get('/', (req, res) => {
   res.send('App is running..');
 });
 app.use('/cart', cartRoutes);
+app.use('/order', orderRoutes);
 
 const CONNECTION_URL = "mongodb+srv://isahilsachdev2002:sahilsachdev1029@cluster0.rnkg0g6.mongodb.net/?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 5001;

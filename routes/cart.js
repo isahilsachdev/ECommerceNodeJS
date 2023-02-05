@@ -4,6 +4,7 @@ import { addToCart, getCartItems, deleteCartItem, deleteAllCartItem } from '../c
 
 const router = express.Router();
 
+// API's for cart
 router.get('/', getCartItems);
 router.post('/:item_id', addToCart);
 router.delete('/:item_id', deleteCartItem);

@@ -1,6 +1,4 @@
 import express from 'express';
-import mongoose from 'mongoose';
-
 import Cart from '../models/addToCart.js';
 
 const router = express.Router();
