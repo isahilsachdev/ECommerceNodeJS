@@ -21,4 +21,15 @@ export const getCouponCode = async (req, res) => {
   }
 }
 
+export const getAllCouponCodes = async (req, res) => {
+  try {
+    const codes = await Coupon.find();
+    res.json({
+      codes,
+    });
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+}
+
 export default router;
