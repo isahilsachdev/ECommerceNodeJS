@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "94d6def5-972e-4309-914d-60a127c3dac1",
+		"name": "ECom NodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post - cart item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Basket Ball\",\r\n    \"price\": 1000,\r\n    \"image\": \"google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/cart/2",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"cart",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - cart item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/cart",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - individual cart item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/cart/2",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"cart",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - all cart items",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/cart",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - order count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/order",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - order item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/order",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - coupon Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/coupon",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - All Used Coupon Codes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/coupon/all",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"coupon",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - Complete checkout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"coupon_code\": \"code-647af1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/checkout",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post - Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 12311,\r\n    \"discount\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ecommerce-nodejs-cqng69ehx-isahilsachdev.vercel.app/details",
+					"protocol": "https",
+					"host": [
+						"ecommerce-nodejs-cqng69ehx-isahilsachdev",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - Details",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
