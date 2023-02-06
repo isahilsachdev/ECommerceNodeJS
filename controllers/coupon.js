@@ -1,5 +1,5 @@
 import express from 'express';
-import Coupon from '../models/Coupon.js';
+import Coupon from '../models/coupon.js';
 import { v4 } from 'uuid';
 
 const router = express.Router();

@@ -1,7 +1,7 @@
 import express from 'express';
-import Details from '../models/Details.js';
-import Order from '../models/Order.js';
-import Coupon from '../models/Coupon.js';
+import Details from '../models/details.js';
+import Order from '../models/order.js';
+import Coupon from '../models/coupon.js';
 
 const router = express.Router();
 
