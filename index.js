@@ -6,6 +6,7 @@ import orderRoutes from './routes/order.js';
 import couponRoutes from './routes/coupon.js';
 import checkoutRoutes from './routes/checkout.js';
 import detailsRoutes from './routes/details.js';
+import collectionRoutes from './routes/collection.js';
 import bodyParser from 'body-parser';
 
 const app = express();
@@ -20,6 +21,7 @@ app.use('/order', orderRoutes);
 app.use('/coupon', couponRoutes);
 app.use('/checkout', checkoutRoutes);
 app.use('/details', detailsRoutes);
+app.use('/product', collectionRoutes);
 
 const CONNECTION_URL = "mongodb+srv://isahilsachdev2002:sahilsachdev1029@cluster0.rnkg0g6.mongodb.net/?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 5001;

@@ -33,4 +33,8 @@ export const getAllCouponCodes = async (req, res) => {
   }
 }
 
+export const removeCoupons = async (req, res) => {
+  await Coupon.deleteMany({});
+}
+
 export default router;

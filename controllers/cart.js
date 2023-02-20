@@ -15,11 +15,13 @@ export const getCartItems = async (req, res) => {
 }
 
 export const addToCart = (req,res) => {
-  const cart = req.body;
-  const { item_id } = req.params
+  const { price, name, category, img, item_id } = req.body;
   // forming a cart item to save in database
   const cartItem = new Cart({
-    ...cart,
+    price,
+    name,
+    category,
+    img: img[0],
     item_id,
     quantity: 1,
   });
@@ -34,13 +36,23 @@ export const deleteCartItem = async (req,res) => {
     if (err) return res.status(500).send(err);
     return res.json({ message: 'Post deleted successfully.', doc });
   });
-
-  res.json({ message: 'Post deleted successfully.' });
 };
 
 export const deleteAllCartItem = async (req,res) => {
   // delete all items from cart
-  Cart.remove({}, (err) => {
+  Cart.deleteMany({}, (err) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send('All items have been deleted');
+    }
+  });
+};
+
+export const deleteAllCartItemForId = async (req,res) => {
+  const { item_id } = req.params;
+  // delete all items from cart for specific id
+  Cart.deleteMany({ item_id }, (err) => {
     if (err) {
       res.send(err);
     } else {

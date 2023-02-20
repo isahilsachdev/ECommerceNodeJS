@@ -25,4 +25,9 @@ export const AddOrder = (req, res) => {
   res.status(200).json({ message: 'Order create', orderItem});
 }
 
+
+export const removeCoupons = async (req, res) => {
+  await Order.deleteMany({});
+}
+
 export default router;

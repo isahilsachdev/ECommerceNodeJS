@@ -40,4 +40,13 @@ export const updateDetails = async (req, res) => {
   }
 }
 
+export const deleteDetails = async (req, res) => {
+  try {
+    console.log("here")
+    await Details.deleteMany({})
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+}
+
 export default router;
